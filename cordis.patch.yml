@@ -1,0 +1,23 @@
+# Mistral Vibe provider — its own route, its own settings page, its own quota
+# card. The route id is `mistral-vibe`; the settings namespace is the plugin id.
+#
+# Optional overrides (a patch replaces the whole row config, so repeat every key
+# you keep):
+#   apiKeyEnv: MISTRAL_VIBE_API_KEY  # credential reference holding the key
+#   apiBase: https://api.mistral.ai  # Mistral API root
+#   consoleBase: https://console.mistral.ai  # console root (sign-in, whoami)
+#   hidden: []                       # model ids kept out of the picker
+#   names: {}                        # display names by model id
+#   barBudget: vibe                  # which counter the sidebar card tracks
+#   currency: EUR                    # currency of the figures
+#   discoveryMinutes: 10             # catalog refresh interval, 0 disables it
+- insert:
+    - id: mistral-vibe
+      name: 'dsh-mistral-vibe'
+      config:
+        apiKeyEnv: MISTRAL_VIBE_API_KEY
+        apiBase: https://api.mistral.ai
+        consoleBase: https://console.mistral.ai
+        barBudget: vibe
+        currency: EUR
+        discoveryMinutes: 10

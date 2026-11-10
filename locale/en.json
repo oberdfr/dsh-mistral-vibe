@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Mistral Vibe",
+    "description": "Mistral Vibe provider with per-model reasoning levels, browser sign-in, live model discovery, model renaming & visibility, and quota panel."
+  }
+}

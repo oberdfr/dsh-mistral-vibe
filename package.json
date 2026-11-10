@@ -1,0 +1,62 @@
+{
+  "name": "dsh-mistral-vibe",
+  "version": "0.1.0",
+  "description": "Mistral Vibe provider for DeepSeek Harness: dedicated route with per-model reasoning levels, browser sign-in, live model discovery, model visibility, renaming and quota panel.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./lib/capabilities.js": "./lib/capabilities.js",
+    "./lib/catalog.js": "./lib/catalog.js",
+    "./lib/signin.js": "./lib/signin.js",
+    "./lib/quota.js": "./lib/quota.js"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "mistral",
+    "mistral-vibe",
+    "llm-provider",
+    "ai",
+    "reasoning"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oberdfr/dsh-mistral-vibe.git"
+  },
+  "homepage": "https://github.com/oberdfr/dsh-mistral-vibe#readme",
+  "bugs": {
+    "url": "https://github.com/oberdfr/dsh-mistral-vibe/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}
